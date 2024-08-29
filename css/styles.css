@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.container {
+    margin-top: 80px; /* Başlık için alan bırakır */
+    padding: 0 20px;
+}
+
+.category {
+    margin-bottom: 40px;
+}
+
+.category h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #00ccff;
+    padding-bottom: 10px;
+}
+
+.walkthrough-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.walkthrough-box {
+    background: #fff;
+    border: 2px solid #00ccff;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.walkthrough-box:hover {
+    background-color: #00ccff;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.walkthrough-box h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.walkthrough-box p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+    .walkthrough-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .walkthrough-grid {
+        grid-template-columns: 1fr;
+    }
+}
